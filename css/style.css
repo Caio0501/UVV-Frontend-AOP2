@@ -1,0 +1,386 @@
+:root {
+  --roxo: #7c3aed;
+  --lilas: #c4b5fd;
+  --ciano: #22d3ee;
+  --fundo: #0f0e1f;
+  --caixa: #1c1a33;
+  --texto: #eeeeee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fundo);
+  background-image:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.25), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(34, 211, 238, 0.15), transparent 40%);
+  background-attachment: fixed;
+  color: var(--texto);
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(135deg, #2e1065, var(--caixa) 60%);
+  padding: 24px 20px;
+  text-align: center;
+  border-bottom: 3px solid var(--roxo);
+}
+
+header h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+  color: var(--ciano);
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.7);
+}
+
+header p {
+  color: #bbb;
+  font-size: 14px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 2px solid var(--roxo);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--roxo);
+  box-shadow: 0 0 12px var(--roxo);
+}
+
+nav a.ativo {
+  background-color: var(--roxo);
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  color: var(--ciano);
+  margin-bottom: 16px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, var(--roxo), var(--ciano));
+  border-radius: 2px;
+}
+
+h3 {
+  color: var(--lilas);
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+a {
+  color: var(--ciano);
+}
+
+.capa {
+  background-image: linear-gradient(rgba(15, 14, 31, 0.55), rgba(15, 14, 31, 0.95)), url("../img/capa-home.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--roxo);
+  border-radius: 12px;
+  padding: 80px 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.capa h2::after {
+  margin: 10px auto 0;
+}
+
+.capa p {
+  max-width: 650px;
+  margin: 0 auto 12px;
+  font-size: 18px;
+}
+
+.botao {
+  display: inline-block;
+  margin-top: 12px;
+  background-color: var(--roxo);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: var(--ciano);
+  color: black;
+}
+
+.destaques {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--caixa);
+  border: 2px solid #2e2a52;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--ciano);
+  box-shadow: 0 0 15px var(--ciano);
+}
+
+.card a {
+  display: block;
+  overflow: hidden;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  margin-top: 12px;
+}
+
+.card p {
+  padding: 0 12px 8px;
+  font-size: 14px;
+}
+
+.post {
+  background-color: var(--caixa);
+  border: 1px solid #2e2a52;
+  border-top: 4px solid var(--roxo);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.post h3 {
+  font-size: 22px;
+}
+
+.post img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+.credito {
+  font-size: 12px;
+  color: #999;
+  margin-top: -8px;
+}
+
+.info {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.nota {
+  display: inline-block;
+  background-color: var(--ciano);
+  color: black;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+.pros-contras {
+  display: flex;
+  gap: 20px;
+}
+
+.pros-contras div {
+  flex: 1;
+}
+
+.pros-contras ul {
+  margin-left: 20px;
+}
+
+.ign {
+  background-color: #252242;
+  border-left: 4px solid var(--ciano);
+  border-radius: 5px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.ign h4 {
+  color: var(--ciano);
+  margin-bottom: 8px;
+}
+
+.ign blockquote {
+  font-style: italic;
+  color: var(--lilas);
+  border-left: 2px solid var(--lilas);
+  padding-left: 12px;
+  margin: 12px 0;
+}
+
+.fonte {
+  font-size: 13px;
+  color: #bbb;
+}
+
+.tabela {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--caixa);
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #333;
+  text-align: left;
+}
+
+th {
+  background-color: var(--roxo);
+}
+
+form {
+  background-color: var(--caixa);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+textarea {
+  height: 120px;
+}
+
+button {
+  background-color: var(--roxo);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--ciano);
+  color: black;
+}
+
+footer {
+  background: linear-gradient(135deg, var(--caixa) 40%, #2e1065);
+  border-top: 3px solid var(--roxo);
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+footer p {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 16px;
+  }
+
+  nav a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  .capa {
+    padding: 50px 16px;
+  }
+
+  .capa p {
+    font-size: 16px;
+  }
+
+  .destaques {
+    grid-template-columns: 1fr;
+  }
+
+  .pros-contras {
+    flex-direction: column;
+    gap: 0;
+  }
+}

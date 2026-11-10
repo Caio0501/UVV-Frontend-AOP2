@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de contato do blog Pixel & Controle">
+  <title>Pixel &amp; Controle - Contatos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Pixel &amp; Controle</h1>
+    <p>Um blog sobre games feito por quem ama jogar</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="lancamentos.html">Lançamentos</a></li>
+        <li><a href="indies.html">Indies</a></li>
+        <li><a href="contato.html" class="ativo">Contatos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contatos</h2>
+    <p>Quer sugerir um jogo para eu jogar ou mandar uma mensagem? Preenche o formulário aí embaixo!</p>
+
+    <form action="#" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
+
+      <label for="assunto">Assunto:</label>
+      <select id="assunto" name="assunto">
+        <option value="sugestao">Sugestão de jogo</option>
+        <option value="duvida">Dúvida</option>
+        <option value="elogio">Elogio</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <section class="post">
+      <h3>Outras formas de contato</h3>
+      <p>E-mail: contato@pixelecontrole.com.br</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Pixel &amp; Controle - Feito por Caio Eduardo e Barbara Rodrigues</p>
+  </footer>
+
+</body>
+</html>
